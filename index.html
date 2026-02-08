@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Pass Essential</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body style="font-family:sans-serif;text-align:center;padding:20px">
+
+  <h2>🎮 Game Pass</h2>
+  <p>Acceso rápido al catálogo</p>
+
+  <button onclick="go('essential')">Essential</button><br><br>
+  <button onclick="go('premium')">Premium</button><br><br>
+  <button onclick="go('ultimate')">Ultimate</button>
+
+  <script>
+    function go(plan){
+      location.href =
+        "https://www.xbox.com/es-mx/xbox-game-pass/games?xr=shellnav#all_all_" +
+        plan + "_";
+    }
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+
+</body>
+</html>
